@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 20% 6%;
+    --foreground: 40 10% 92%;
+
+    --card: 228 18% 10%;
+    --card-foreground: 40 10% 92%;
+
+    --popover: 228 18% 10%;
+    --popover-foreground: 40 10% 92%;
+
+    --primary: 43 72% 53%;
+    --primary-foreground: 228 20% 6%;
+
+    --secondary: 228 15% 16%;
+    --secondary-foreground: 40 10% 85%;
+
+    --muted: 228 12% 14%;
+    --muted-foreground: 228 8% 55%;
+
+    --accent: 43 60% 45%;
+    --accent-foreground: 228 20% 6%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 228 12% 18%;
+    --input: 228 12% 18%;
+    --ring: 43 72% 53%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 72% 53%;
+    --gold-light: 43 80% 65%;
+    --gold-dark: 43 65% 40%;
+    --charcoal: 228 18% 10%;
+    --charcoal-light: 228 15% 16%;
+
+    --sidebar-background: 228 20% 8%;
+    --sidebar-foreground: 40 10% 85%;
+    --sidebar-primary: 43 72% 53%;
+    --sidebar-primary-foreground: 228 20% 6%;
+    --sidebar-accent: 228 15% 16%;
+    --sidebar-accent-foreground: 40 10% 85%;
+    --sidebar-border: 228 12% 18%;
+    --sidebar-ring: 43 72% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .gold-gradient {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold;
+  }
+
+  .gold-gradient-text {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+
+  .gold-border-glow {
+    box-shadow: 0 0 20px -5px hsl(43 72% 53% / 0.2),
+                0 0 40px -10px hsl(43 72% 53% / 0.1);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      hsl(228 20% 6% / 0.3) 0%,
+      hsl(228 20% 6% / 0.6) 50%,
+      hsl(228 20% 6% / 0.95) 100%
+    );
+  }
+
+  .section-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(228 20% 6%) 0%,
+      hsl(228 18% 8%) 50%,
+      hsl(228 20% 6%) 100%
+    );
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
