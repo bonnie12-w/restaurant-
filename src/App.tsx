@@ -13,6 +13,8 @@ import KitchenPage from "./pages/KitchenPage";
 import RiderPage from "./pages/RiderPage";
 import LoginPage from "./pages/LoginPage";
 import UnauthorizedPage from "./pages/UnauthorizedPage";
+import ReservationsPage from "./pages/ReservationsPage";
+import AboutPage from "./pages/AboutPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
               {/* Public routes */}
               <Route path="/" element={<Index />} />
               <Route path="/menu" element={<MenuPage />} />
+              <Route path="/reservations" element={<ReservationsPage />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/unauthorized" element={<UnauthorizedPage />} />
 
