@@ -1,122 +1,110 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ShoppingBag } from "lucide-react";
-import { useCart } from "@/context/CartContext";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Instagram, Clock, Utensils, Flame, Users } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import CartSheet from "@/components/CartSheet";
+import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Menu", href: "/menu" },
-  { name: "Reservations", href: "/#reservations" },
-  { name: "About", href: "/#about" },
-];
-
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const { itemCount } = useCart();
-  const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => setMobileOpen(false), [location]);
-
+const AboutPage = () => {
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/90 backdrop-blur-xl border-b border-border/50" : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl">🔥</span>
-          <div>
-            <h1 className="font-display text-lg sm:text-xl font-bold gold-gradient-text leading-tight">
-              Savannah Flame
-            </h1>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Grill</p>
-          </div>
-        </Link>
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <CartSheet />
 
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className="text-sm tracking-wide uppercase text-foreground/70 hover:text-primary transition-colors duration-300"
+      <div className="pt-20">
+        {/* About Hero */}
+        <section className="py-24 section-gradient">
+          <div className="container mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
             >
-              {link.name}
-            </Link>
-          ))}
-        </div>
+              <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Our Story</p>
+              <h1 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
+                About <span className="gold-gradient-text italic">Savannah Flame</span>
+              </h1>
+            </motion.div>
 
-        <div className="flex items-center gap-4">
-          <Link
-            to="/menu"
-            className="relative p-2 text-foreground/70 hover:text-primary transition-colors"
-          >
-            <ShoppingBag className="w-5 h-5" />
-            {itemCount > 0 && (
-              <motion.span
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                className="absolute -top-1 -right-1 w-5 h-5 rounded-full gold-gradient text-primary-foreground text-[10px] font-bold flex items-center justify-center"
-              >
-                {itemCount}
-              </motion.span>
-            )}
-          </Link>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                Born from a passion for authentic flame-grilled cuisine, Savannah Flame Grill brings the rich flavors 
+                of the African savannah to Nairobi's vibrant dining scene. Every dish is crafted with premium ingredients, 
+                grilled over open flames, and served with warmth.
+              </p>
+            </motion.div>
 
-          <Link
-            to="/admin"
-            className="hidden md:inline-flex text-xs tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
-          >
-            Admin
-          </Link>
-
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-foreground"
-          >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
-          >
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-lg font-display text-foreground/80 hover:text-primary transition-colors"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
+              {[
+                { icon: Flame, title: "Open Flame Cooking", desc: "Every dish kissed by real fire for authentic smoky flavor." },
+                { icon: Utensils, title: "Premium Ingredients", desc: "Locally sourced, sustainably farmed meats and fresh produce." },
+                { icon: Users, title: "Warm Hospitality", desc: "A dining experience that feels like home, every single time." },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="glass-card rounded-2xl p-8 text-center"
                 >
-                  {link.name}
-                </Link>
+                  <item.icon className="w-8 h-8 text-primary mx-auto mb-4" />
+                  <h3 className="font-display font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.desc}</p>
+                </motion.div>
               ))}
-              <Link to="/admin" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Admin Dashboard
-              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-24">
+          <div className="container mx-auto px-4 sm:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Visit Us</p>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
+                Get in <span className="gold-gradient-text italic">Touch</span>
+              </h2>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-xl mx-auto glass-card rounded-2xl p-8 sm:p-10 space-y-5"
+            >
+              {[
+                { icon: MapPin, text: "Westlands, Nairobi, Kenya" },
+                { icon: Phone, text: "+254 712 345 678" },
+                { icon: Mail, text: "hello@savannahflame.co.ke" },
+                { icon: Instagram, text: "@savannahflamegrill" },
+                { icon: Clock, text: "Mon – Sun: 11:00 AM – 11:00 PM" },
+              ].map((item, i) => (
+                <p key={i} className="flex items-center gap-4 text-muted-foreground">
+                  <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>{item.text}</span>
+                </p>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        <FAQSection />
+      </div>
+      <Footer />
+    </div>
   );
 };
 
-export default Navbar;
+export default AboutPage;
