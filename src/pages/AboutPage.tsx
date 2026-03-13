@@ -23,7 +23,7 @@ const AboutPage = () => {
             >
               <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Our Story</p>
               <h1 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
-                About <span className="gold-gradient-text italic">Savannah Flame</span>
+                About <span className="gold-gradient-text italic">cafedelirestaurant</span>
               </h1>
             </motion.div>
 
@@ -34,7 +34,7 @@ const AboutPage = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Born from a passion for authentic flame-grilled cuisine, Savannah Flame Grill brings the rich flavors 
+                Born from a passion for authentic flame-grilled cuisine, cafedelirestaurant brings the rich flavors 
                 of the African savannah to Nairobi's vibrant dining scene. Every dish is crafted with premium ingredients, 
                 grilled over open flames, and served with warmth.
               </p>
@@ -87,8 +87,8 @@ const AboutPage = () => {
               {[
                 { icon: MapPin, text: "Westlands, Nairobi, Kenya" },
                 { icon: Phone, text: "+254 712 345 678" },
-                { icon: Mail, text: "hello@savannahflame.co.ke" },
-                { icon: Instagram, text: "@savannahflamegrill" },
+                { icon: Mail, text: "hello@cafedelirestaurant.co.ke" },
+                { icon: Instagram, text: "@cafedelirestaurant" },
                 { icon: Clock, text: "Mon – Sun: 11:00 AM – 11:00 PM" },
               ].map((item, i) => (
                 <p key={i} className="flex items-center gap-4 text-muted-foreground">
