@@ -67,7 +67,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">@savannahflamegrill</p>
+            <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">@cafedelirestaurant</p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
               Follow the <span className="gold-gradient-text italic">Flame</span>
             </h2>
