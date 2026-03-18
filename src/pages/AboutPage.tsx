@@ -23,7 +23,7 @@ const AboutPage = () => {
             >
               <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Our Story</p>
               <h1 className="font-display text-4xl sm:text-5xl font-bold text-foreground">
-                About <span className="gold-gradient-text italic">cafedelirestaurant</span>
+                About <span className="gold-gradient-text italic">WapekDelicacies</span>
               </h1>
             </motion.div>
 
@@ -87,8 +87,8 @@ const AboutPage = () => {
               {[
                 { icon: MapPin, text: "Westlands, Nairobi, Kenya" },
                 { icon: Phone, text: "+254 712 345 678" },
-                { icon: Mail, text: "hello@cafedelirestaurant.co.ke" },
-                { icon: Instagram, text: "@cafedelirestaurant" },
+                { icon: Mail, text: "hello@WapekDelicacies.co.ke" },
+                { icon: Instagram, text: "@WapekDelicacies" },
                 { icon: Clock, text: "Mon – Sun: 11:00 AM – 11:00 PM" },
               ].map((item, i) => (
                 <p key={i} className="flex items-center gap-4 text-muted-foreground">
