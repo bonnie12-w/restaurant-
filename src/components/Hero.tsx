@@ -25,7 +25,7 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-primary tracking-[0.4em] uppercase text-xs sm:text-sm mb-6"
           >
-            Nairobi's Finest café Experience
+            Nairobi's Finest Cameroonian Experience
           </motion.p>
 
           <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.9] mb-6">
@@ -39,7 +39,7 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-foreground/60 text-lg sm:text-xl max-w-xl mx-auto mb-10 font-body"
           >
-            Premium flame-grilled steaks, authentic Kenyan cuisine, and world-class cocktails in an unforgettable atmosphere.
+            Nairobi's premier The finest of Cameroonian 🇨🇲 cuisine in an unforgettable atmosphere.
           </motion.p>
 
           <motion.div
