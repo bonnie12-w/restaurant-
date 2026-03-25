@@ -9,12 +9,12 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🔥</span>
               <div>
-                <h3 className="font-display text-xl font-bold gold-gradient-text">Wapek Delicacies</h3>
-                <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">WD</p>
+                <h3 className="font-display text-xl font-bold gold-gradient-text">La Sauce Restaurant</h3>
+                <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">LA</p>
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Nairobi's premier traditional restaurant. Premium steaks, authentic Kenyan cuisine, and an unforgettable dining experience.
+              Nairobi's premier The finest of Cameroonian 🇨🇲 cuisine.
             </p>
           </div>
 
@@ -28,10 +28,10 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-primary" /> +254 712 345 678
               </p>
               <p className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary" /> hello@WapekDelicacies.co.ke
+                <Mail className="w-4 h-4 text-primary" /> hello@LaSauceRestaurant.co.ke
               </p>
               <p className="flex items-center gap-3">
-                <Instagram className="w-4 h-4 text-primary" /> @Wapek Delicacies
+                <Instagram className="w-4 h-4 text-primary" /> @LaSauceRestaurant
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-xs text-muted-foreground/50">
-          © 2026 WapekDelicacies. All rights reserved.
+          © 2026 La Sauce Restaurant. All rights reserved.
         </div>
       </div>
     </footer>
