@@ -53,7 +53,7 @@ const LoginPage = () => {
               <Flame className="w-8 h-8 text-primary-foreground" />
             </div>
             <h1 className="font-display text-2xl font-bold text-foreground">Staff Login</h1>
-            <p className="text-sm text-muted-foreground mt-2">La Sauce Restaurant Management</p>
+            <p className="text-sm text-muted-foreground mt-2">The Landmark Bistro Management</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -65,7 +65,7 @@ const LoginPage = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="staff@LaSauceRestaurant.co.ke"
+                placeholder="staff@TheLandmarkBistro.co.ke"
                 className="bg-secondary border-border"
                 required
               />
