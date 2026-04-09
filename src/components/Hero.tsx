@@ -25,7 +25,7 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-primary tracking-[0.4em] uppercase text-xs sm:text-sm mb-6"
           >
-            Nairobi's premier
+            Upscale Dining & Bar experience in the heart of Nairobi
           </motion.p>
 
           <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.9] mb-6">
