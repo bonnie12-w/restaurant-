@@ -9,12 +9,12 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🔥</span>
               <div>
-                <h3 className="font-display text-xl font-bold gold-gradient-text">La Sauce Restaurant</h3>
-                <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">LA</p>
+                <h3 className="font-display text-xl font-bold gold-gradient-text">The Landmark Bistro</h3>
+                <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">LB</p>
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Nairobi's premier The finest of Cameroonian 🇨🇲 cuisine.
+              Indulge in a symphony of taste at our bistro & savor every bite with handcrafted cocktails.
             </p>
           </div>
 
@@ -22,16 +22,16 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-foreground mb-4">Contact</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
               <p className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-primary" /> Nairobi, Kenya
+                <MapPin className="w-4 h-4 text-primary" /> 📍Mwanzi Road - next to Westgate Mall & Karen Close, Karen
               </p>
               <p className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" /> +254 712 345 678
               </p>
               <p className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary" /> hello@LaSauceRestaurant.co.ke
+                <Mail className="w-4 h-4 text-primary" /> hello@TheLandmarkBistro.co.ke
               </p>
               <p className="flex items-center gap-3">
-                <Instagram className="w-4 h-4 text-primary" /> @LaSauceRestaurant
+                <Instagram className="w-4 h-4 text-primary" /> @TheLandmarkBistro
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-xs text-muted-foreground/50">
-          © 2026 La Sauce Restaurant. All rights reserved.
+          © 2026 The Landmark Bistro. All rights reserved.
         </div>
       </div>
     </footer>
